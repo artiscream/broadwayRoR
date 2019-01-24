@@ -1,4 +1,5 @@
 class ReviewsController < ApplicationController
+	before_action :authenticate_user!
 	before_action :find_play
 	before_action :find_review, only: [:edit, :update, :destroy]
 
@@ -22,7 +23,7 @@ class ReviewsController < ApplicationController
 	end
 
 	def update
-		if @review,update(review_params)
+		if @review.update(review_params)
 			redirect_to play_path(@play)
 		else
 			render 'edit'
