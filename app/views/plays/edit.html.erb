@@ -4,6 +4,7 @@
 	<%= f.input :title, label: "Play title" %>
 	<%= f.input :description %>
 	<%= f.input :director %>
+	<%= f.file_field :play_img %>
 	<%= f.select :category_id, @categories %>
 	<%= f.button :submit %>
 <% end %>

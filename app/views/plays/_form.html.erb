@@ -2,6 +2,7 @@
 	<%= f.input :title, label: "Play title" %>
 	<%= f.input :description %>
 	<%= f.input :director %>
+	<%= f.file_field :play_img %>
 	<br>
 	<%= select_tag(:category_id, options_for_select(@categories), {:prompt => "Select a category"} ) %>
 	<br>
