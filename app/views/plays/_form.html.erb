@@ -2,5 +2,8 @@
 	<%= f.input :title, label: "Play title" %>
 	<%= f.input :description %>
 	<%= f.input :director %>
+	<br>
+	<%= select_tag(:category_id, options_for_select(@categories), {:prompt => "Select a category"} ) %>
+	<br>
 	<%= f.button :submit %>
 <% end %>
